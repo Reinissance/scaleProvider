@@ -1,0 +1,18 @@
+
+#N canvas 84 131 640 480 10;
+#X obj 257 118 unpack;
+#X obj 246.5 306 outlet;
+#X obj 246.5 278 % 12;
+#X obj 246.5 245 i;
+#X obj 157 209 gate;
+#X obj 285 163 > 0;
+#X obj 257 80 inlet;
+#X obj 170 110 inlet;
+#X connect 7 0 4 1;
+#X connect 6 0 0 0;
+#X connect 5 0 4 0;
+#X connect 4 0 3 0;
+#X connect 3 0 2 0;
+#X connect 2 0 1 0;
+#X connect 0 1 5 0;
+#X connect 0 0 3 1;
