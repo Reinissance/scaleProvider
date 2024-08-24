@@ -1,0 +1,8 @@
+#N struct 1708-symarray float x array symbols 1708-sym;
+#N struct 1708-sym symbol name float on;
+#N struct 1852-symarray float x array symbols 1852-sym;
+#N struct 1852-sym symbol name float on;
+#N canvas 827 239 527 327 12;
+#X obj 22 163 scaleSeq Bass;
+#X obj 22 23 scaleOscReceiver;
+#X obj 22 430 scaleSeq Keys;

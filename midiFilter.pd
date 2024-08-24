@@ -1,0 +1,13 @@
+#N canvas 827 239 100 100 12;
+#N canvas 0 22 450 300 \$0-patch 0;
+#X obj 0 0 scaleProvider/midiChannelFilter 1;
+#X restore 23 190 pd \$0-patch;
+#X obj 23 33 nbx 3 18 -1e+37 1e+37 0 0 empty empty setChannel 0 -8 0 10 #333333 #e4e4e4 #191919 0 256;
+#X obj 23 110 pack f \$0;
+#X msg 23 136 \; pd-\$2-patch clear \; pd-\$2-patch obj 0 0 scaleProvider/midiChannelFilter \$1;
+#X obj 23 58 i;
+#X obj 23 84 change;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;

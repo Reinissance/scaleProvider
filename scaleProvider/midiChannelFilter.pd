@@ -1,0 +1,11 @@
+#N canvas 827 239 527 327 12;
+#X obj 171 129 s \$2-activity;
+#X obj 39 47 notein \$1;
+#X obj 39 73 noteout;
+#X obj 171 70 > 0;
+#X obj 171 96 sel 1;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 1 3 0 32.................A....zE...P.....cA...P.....;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
