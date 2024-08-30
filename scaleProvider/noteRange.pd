@@ -1,7 +1,7 @@
 #N canvas 827 239 527 327 12;
 #X obj 407 448 inlet;
 #X obj 407 535 midi2note;
-#X obj 0 0 cnv 15 55 21 empty \$0-label A4 5 12 0 14 #696969 #e1e1e1 0;
+#X obj 0 0 cnv 15 55 21 empty \$0-label C4 5 12 0 14 #696969 #e1e1e1 0;
 #X obj 407 562 prepend label;
 #X obj 407 588 s \$0-label;
 #X obj 265 333 t f f;
@@ -91,6 +91,7 @@
 #X connect 36 0 33 0;
 #X connect 37 0 32 0;
 #X connect 38 0 31 0;
+#X connect 38 0 39 0 48.................S....bJ...vD....mB...jC...v2....4....7M....l....;
 #X connect 39 0 6 0;
 #X connect 40 0 10 0 32.................K....HD...vB....BA...TA....;
 #X connect 40 0 16 0 32.................K....LG...vB....yA...XA....;
