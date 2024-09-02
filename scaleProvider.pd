@@ -861,6 +861,9 @@
 #X obj 190 396 gate 1;
 #X obj 488 55 daw_storage \$0-lowerRange;
 #X obj 490 30 daw_storage \$0-upperRange;
+#X obj 849 19 loadbang;
+#X msg 849 45 pluginmode;
+#X obj 849 71 s pd;
 #X connect 1 0 24 1 32.................F....j++++uA....4++++y.....;
 #X connect 2 0 1 0 32.................D..........A.........f.....;
 #X connect 2 0 23 0 32.................9....D....fO....A....rG....;
@@ -884,4 +887,6 @@
 #X connect 24 0 3 0 32.................D..........A.........f.....;
 #X connect 25 0 6 0 48......................n4+++O.....Z9+++a++++OM++++1++++Sy+++u8++++;
 #X connect 26 0 5 0 48......................j4+++O.....Y9+++i9+++uL++++n++++Ky+++O5++++;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
 #X coords 0 0 1 1 462 116 1 0 0;
