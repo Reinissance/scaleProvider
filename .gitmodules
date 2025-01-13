@@ -1,0 +1,3 @@
+[submodule "scaleProvider/list-abs"]
+	path = scaleProvider/list-abs
+	url = https://github.com/pd-externals/list-abs
