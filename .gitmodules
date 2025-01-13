@@ -7,3 +7,6 @@
 [submodule "scaleProvider/rc"]
 	path = scaleProvider/rc
 	url = https://github.com/danomatika/rc-patches.git
+[submodule "scaleProvider/abs"]
+	path = scaleProvider/abs
+	url = https://github.com/Reinissance/pd_abstractions.git
