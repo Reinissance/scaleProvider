@@ -4,3 +4,6 @@
 [submodule "scaleProvider/rjlib"]
 	path = scaleProvider/rjlib
 	url = https://github.com/rjdj/rjlib.git
+[submodule "scaleProvider/rc"]
+	path = scaleProvider/rc
+	url = https://github.com/danomatika/rc-patches.git
