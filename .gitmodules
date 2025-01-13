@@ -1,3 +1,6 @@
 [submodule "scaleProvider/list-abs"]
 	path = scaleProvider/list-abs
 	url = https://github.com/pd-externals/list-abs
+[submodule "scaleProvider/rjlib"]
+	path = scaleProvider/rjlib
+	url = https://github.com/rjdj/rjlib.git
