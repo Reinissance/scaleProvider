@@ -1,10 +1,13 @@
-#N struct 1175-symarray float x array symbols 1175-sym;
-#N struct 1175-sym symbol name float on;
+#N struct 1119-symarray float x array symbols 1119-sym;
+#N struct 1119-sym symbol name float on;
+#N struct 1178-symarray float x array symbols 1178-sym;
+#N struct 1178-sym symbol name float on;
 #N canvas 270 71 843 250 12;
 #X declare -path scaleProvider;
 #X declare -path list-abs;
 #X declare -path rjlib/rj;
-#X declare -path rc;
+#X declare -path rc/rc;
+#X declare -path abs;
 #X obj 21 10 pad 432 212 0 0 0;
 #X obj 21 269 route list click;
 #X obj 21 356 spigot;
@@ -222,7 +225,7 @@
 #X msg 767 826 symbol \$1;
 #X obj 844 555 t a a a;
 #X msg 1008 137 set;
-#X msg 1008 163 1 1-4 15-1;
+#X msg 1008 163 5 1-1;
 #X obj 392 138 t b f f b;
 #X obj 1063 113 prepend add2;
 #X obj 1008 189 route 1 2 3 4 5 6 7;
@@ -532,7 +535,7 @@
 #X obj 804 111 inlet callPreset;
 #X obj 804 137 t b a;
 #X msg 826 413 symbol \$2;
-#X obj 473 583 s \$0-length_r;
+#X obj 467 643 s \$0-length_r;
 #X obj 302 818 outlet data;
 #X obj 302 670 list split 2;
 #X obj 395 672 list;
@@ -580,8 +583,10 @@
 #X msg 1067 695 0;
 #X obj 1067 721 print \$0-seqEmpty;
 #X obj 918 216 daw_storage \$1_\$0-seq;
-#X obj 945 401 print menuDAW;
+#X obj 945 457 print menuDAW;
 #X msg 314 256;
+#X obj 314 581 t s b;
+#X obj 466 591 f;
 #X connect 1 0 0 0 32.................G.........vA.........z.....;
 #X connect 2 0 51 0 32.................S....XC...vD....1....XB....;
 #X connect 2 0 1 0 32.................PB.........j..........R....;
@@ -616,8 +621,8 @@
 #X connect 27 1 21 0 32.................C.........v..........T.....;
 #X connect 28 0 24 0 32.................T..........E.........bB....;
 #X connect 28 1 18 0 32.................E....r....PA....K....j.....;
-#X connect 29 0 5 0 32.................Y....T++++eF....0++++KC....;
-#X connect 29 1 9 0 32.................C....7F...v.....uA...j.....;
+#X connect 29 0 59 0;
+#X connect 29 1 60 1;
 #X connect 30 0 58 0 32.................D..........A.........b.....;
 #X connect 31 0 47 0 32.................D..........A.........b.....;
 #X connect 32 0 38 0 32.................D..........A.........b.....;
@@ -673,6 +678,9 @@
 #X connect 56 0 19 0;
 #X connect 58 0 49 1 32.................t.........fK.........vE....;
 #X connect 58 0 56 0 48......................3R.........tD...X7+++OWB...F++++yk...fw++++;
+#X connect 59 0 5 0 32.................L....T++++OC....0++++iA....;
+#X connect 59 1 60 0;
+#X connect 60 0 9 0;
 #X restore 693 232 pd presets;
 #X f 34;
 #X obj 668 713 u_list2symbol;
@@ -694,8 +702,8 @@
 #X obj 1082 201 t s b;
 #X obj 1082 176 symbol;
 #X msg 1118 86 symbol \$2;
-#X obj 466 43 bng 25 250 50 0 empty \$0-overwrite overwrite\ Preset 0 33 0 11 #006800 #eeeeee #006800;
-#X obj 623 43 bng 25 250 50 0 empty \$0-delete delete\ Preset -41 33 0 11 #570000 #eeeeee #570000;
+#X obj 466 -43 bng 25 250 50 0 empty \$0-overwrite overwrite\ Preset 0 33 0 11 #006800 #eeeeee #006800;
+#X obj 623 -43 bng 25 250 50 0 empty \$0-delete delete\ Preset -41 33 0 11 #570000 #eeeeee #570000;
 #X obj 1182 175 symbol;
 #X msg 1218 85 symbol \$2;
 #X obj 1183 207 t b s;
@@ -777,7 +785,9 @@
 #X msg 668 686;
 #X obj -19 -172 declare -path list-abs;
 #X obj -8 -144 declare -path rjlib/rj;
-#X obj 2 -114 declare -path rc;
+#X obj 2 -114 declare -path rc/rc;
+#X obj 12 -84 declare -path abs;
+#X msg 623 283 symbol;
 #X connect 0 0 1 0 32.................X..........F.........7B....;
 #X connect 1 0 4 1 32.................S....bB...vD....m....TB....;
 #X connect 1 0 2 0 32.................h.........fH.........PD....;
@@ -793,8 +803,8 @@
 #X connect 10 0 114 1 32.................J....f7+++uB....H++++OA....;
 #X connect 11 0 10 1 32.................AA...Pv+++eP....D7+++6J....;
 #X connect 11 0 129 2 48......................LH.........CB...L....PAA...C....TP...PB....;
-#X connect 11 0 127 0 64......................zC.........8....34+++Ol....d9+++iI...fh++++1B...n3+++us....J9+++C;
 #X connect 11 0 142 0 32.................5D........fNA........Lm....;
+#X connect 11 0 127 0 64......................zC.........8....34+++Ol....d9+++iI...fh++++1B...n3+++us....J9+++C;
 #X connect 12 0 50 0 32.................MA........PS.........nI....;
 #X connect 13 0 12 0 32.................G.........vA.........z.....;
 #X connect 13 0 99 1 32.................j....Pv+++OI....D7+++eD....;
@@ -869,9 +879,10 @@
 #X connect 62 0 15 0 32.................h....r9+++uH....q++++SD....;
 #X connect 63 0 59 0 32.................D....7++++OA....+++++i.....;
 #X connect 71 0 93 0 32.................F.........fA.........v.....;
-#X connect 72 0 62 0 32.................SB...3t++++j....t6+++ia....;
-#X connect 72 0 83 0 32.................o....zD...PJ....MA...nG....;
 #X connect 72 0 79 3 48.................sD...3z+++eKA...N8+++Ob...v39+++CG...Lt+++urD...;
+#X connect 72 0 83 0 32.................o....zD...PJ....MA...nG....;
+#X connect 72 0 62 0 32.................SB...3t++++j....t6+++ia....;
+#X connect 72 0 214 0;
 #X connect 73 0 106 0 32.................H..........B.........7.....;
 #X connect 74 0 41 0 48......................vZ.........rF...37+++ufB...N++++Kn...fy++++;
 #X connect 79 0 73 0 48......................Pz+++O.....D8+++qj+++eB9+++J4+++mf+++uR9+++;
@@ -1041,4 +1052,5 @@
 #X connect 193 0 180 0 48......................................jr+++O.....I6+++C....Px9+++;
 #X connect 208 0 207 0;
 #X connect 209 0 130 0 32.................D..........A.........f.....;
+#X connect 214 0 129 1 48......................jC.........4....r6+++eb....69+++GG...vt++++;
 #X coords 0 0 1 1 664 237 2 -2 -2;
