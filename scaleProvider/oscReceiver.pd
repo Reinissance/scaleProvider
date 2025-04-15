@@ -4,7 +4,7 @@
 #X msg 354 151 disconnect;
 #X obj 471 162 r \$0-OSC_port;
 #X symbolatom 8 59 9 0 0 2 OSCport - \$0-OSC_port 16;
-#X msg 269 91 set 666;
+#X msg 318 92 set 666;
 #X obj 471 217 t b f;
 #X symbolatom 8 103 9 0 0 2 OSChost - - 16;
 #X obj 8 288 prepend connect;
@@ -21,14 +21,14 @@
 #X msg 385 79 symbol localhost;
 #X msg 535 82 set \$1;
 #X obj 582 382 outlet;
-#X obj 298 5 loadmess \$1;
 #X obj 471 191 rc/rc/u_symbol2float;
+#X obj 298 -9 pipe 1000;
+#X obj 298 -35 loadmess \$1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 7 0;
 #X connect 2 0 15 0;
-#X connect 3 0 23 0;
-#X connect 5 0 4 0;
+#X connect 3 0 22 0;
 #X connect 6 0 7 0;
 #X connect 6 1 13 0;
 #X connect 7 0 12 0;
@@ -51,6 +51,7 @@
 #X connect 18 1 13 0;
 #X connect 19 0 7 0;
 #X connect 20 0 4 0;
-#X connect 22 0 17 0;
-#X connect 23 0 6 0;
+#X connect 22 0 6 0;
+#X connect 23 0 17 0;
+#X connect 24 0 23 0;
 #X coords 0 0 1 1 144 136 1 0 0;
