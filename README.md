@@ -33,8 +33,8 @@ Currently, there are three plugins:
     - Create another MIDI track, set the previous track's MIDI output as its input, and load an drum-instrument for audio generation or route the output to your GM device.
 
 4. **Creating presets**
-    - In both the scaleFollowingSequencer and the scaleDrumSequencer you can create Presets by typing in a unique name for each. It stores the length of the sequence and the playbackspeed, randomness (which randomizes the playback positions to the given value) as well as the loaded drum-Note sounds in the scaleDrumSequencer and the MIDI-out range of the scaleFollowingSequencer (which defines the range in which the notes are played, at least one octave), and last but not least of course the "notes" within the sequencers itselfs.
-    - The scaleProvider additionally can store his own presets, which on the one hand contains the DAW's BPM (see below) and the MIDI-in range (keys pressed outside this range on the connected midi-keyboard are ignored). Additionally it stores the currently selected Presets within all active scaleFollowingSequencers or drumSequencers.
+    - In both the scaleFollowingSequencer and the scaleDrumSequencer you can create Presets by typing in a unique name for each. They store the length of the sequence and the playbackspeed, randomness (which randomizes the playback positions to the given value) as well as the loaded drum-Note sounds in the scaleDrumSequencer and the MIDI-out range of the scaleFollowingSequencer (which defines the range in which the notes are played, at least one octave), and last but not least of course the "notes" within the sequencers itselfs.
+    - The scaleProvider additionally can store his own presets, which on the one hand contains the DAW's BPM (see below) and the MIDI-in range (keys pressed outside this range on the connected midi-keyboard are ignored) and the selected programchange message you play your keyboard with. Additionally it stores the currently selected Presets within all active scaleFollowingSequencers or drumSequencers.
     - The nice thing about plugdata is also that the presets are then stored within the DAW.
 
 5. **Controlling the DAW's BPM**
