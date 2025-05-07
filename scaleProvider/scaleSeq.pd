@@ -1,7 +1,7 @@
-#N struct 1359-symarray float x array symbols 1359-sym;
-#N struct 1359-sym symbol name float on;
-#N struct 1419-symarray float x array symbols 1419-sym;
-#N struct 1419-sym symbol name float on;
+#N struct 2489-symarray float x array symbols 2489-sym;
+#N struct 2489-sym symbol name float on;
+#N struct 2549-symarray float x array symbols 2549-sym;
+#N struct 2549-sym symbol name float on;
 #N canvas 270 71 843 250 12;
 #X declare -path scaleProvider;
 #X declare -path list-abs;
@@ -10,7 +10,7 @@
 #X declare -path abs;
 #X obj 466 -43 bng 25 250 50 0 empty \$0-overwrite overwrite\ Preset 0 33 0 11 #006800 #eeeeee #006800;
 #X obj 623 -43 bng 25 250 50 0 empty \$0-delete delete\ Preset -41 33 0 11 #570000 #eeeeee #570000;
-#X obj 613 43 vsl 8 2 0 127 0 0 Preset-1_s Preset-1_r x 3 3 0 4 #d9d9d9 #d9d9d9 #606060 0 0;
+#X obj 613 43 vsl 8 2 0 127 0 0 Preset-1_s Preset-1_r x 5 9 0 4 #d9d9d9 #d9d9d9 #606060 0 0;
 #X obj 613 43 vsl 8 2 0 127 0 0 Preset-2_s Preset-2_r x 3 3 0 4 #d9d9d9 #d9d9d9 #606060 0 0;
 #X obj 613 43 vsl 8 2 0 127 0 0 Preset-3_s Preset-3_r x 3 3 0 4 #d9d9d9 #d9d9d9 #606060 0 0;
 #X obj 613 43 vsl 8 2 0 127 0 0 Preset-4_s Preset-4_r x 3 3 0 4 #d9d9d9 #d9d9d9 #606060 0 0;
@@ -27,14 +27,14 @@
 #X obj 21 269 route list click;
 #X obj 21 356 spigot;
 #N canvas 63 88 450 300 \$0-timeGrid 0;
-#X obj 1 1 cnv 15 52 210 empty 1003-timeGrid_0 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 55 1 cnv 15 52 210 empty 1003-timeGrid_1 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 109 1 cnv 15 52 210 empty 1003-timeGrid_2 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 163 1 cnv 15 52 210 empty 1003-timeGrid_3 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 217 1 cnv 15 52 210 empty 1003-timeGrid_4 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 271 1 cnv 15 52 210 empty 1003-timeGrid_5 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 325 1 cnv 15 52 210 empty 1003-timeGrid_6 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
-#X obj 379 1 cnv 15 52 210 empty 1003-timeGrid_7 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 1 1 cnv 15 52 210 empty 2487-timeGrid_0 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 55 1 cnv 15 52 210 empty 2487-timeGrid_1 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 109 1 cnv 15 52 210 empty 2487-timeGrid_2 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 163 1 cnv 15 52 210 empty 2487-timeGrid_3 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 217 1 cnv 15 52 210 empty 2487-timeGrid_4 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 271 1 cnv 15 52 210 empty 2487-timeGrid_5 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 325 1 cnv 15 52 210 empty 2487-timeGrid_6 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
+#X obj 379 1 cnv 15 52 210 empty 2487-timeGrid_7 empty 20 12 0 14 #e1e1e1 #e1e1e1 0;
 #X coords 0 0 1 1 432 213 1 0 0;
 #X restore 21 10 pd \$0-timeGrid;
 #X obj 49 325 list;
@@ -855,6 +855,7 @@
 #X msg 190 1345 \$1 1-\$3;
 #X obj -258 414 spigot 1;
 #X msg 668 686;
+#X obj 704 12 del;
 #X connect 0 0 159 0 80.......................K.........vB...fA....BA...X....fP...vK....fE...7B....XA...GA...fl...vQ....nI...TJ....;
 #X connect 1 0 192 0 32.................1.........fM.........rF....;
 #X connect 15 0 16 0 32.................X..........F.........7B....;
@@ -1024,9 +1025,9 @@
 #X connect 137 0 136 1 48......................HB.........h....zf+++OQ....M3+++SD...PC9+++;
 #X connect 138 0 230 0 48......................jC.........4.........vp.........rJ.........;
 #X connect 139 0 195 0 32.................e....XL...vG....FC...zC....;
-#X connect 140 0 141 0 48......................j++++O.....4++++y5+++e7++++r9+++G++++Oq++++;
 #X connect 140 0 160 0 32.................a....zg...vF....cH...XC....;
 #X connect 140 0 187 0 64......................TD.........EA...j5+++ub....o9+++KG...fg++++fB...X3+++On....F9+++C;
+#X connect 140 0 231 0;
 #X connect 140 1 150 0 32.................BA...f8+++uP....X++++SH....;
 #X connect 140 1 154 1 32.................N....zc...fC....cG....G....;
 #X connect 140 1 152 1 48.................S....7C...vD....+....XB...PdA...l....jW...Pb....;
@@ -1155,4 +1156,5 @@
 #X connect 228 0 94 0 64......................zC.........8....7++++ud....+++++qG...v7++++2B...L+++++s....y++++C;
 #X connect 229 0 206 0;
 #X connect 230 0 137 0 32.................D..........A.........f.....;
+#X connect 231 0 141 0;
 #X coords 0 0 1 1 664 237 2 -2 -2;
