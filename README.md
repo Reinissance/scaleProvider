@@ -16,6 +16,20 @@ Currently, there are three plugins:
 
 - A digital audio workstation (DAW).
 - [plugdata](https://plugdata.org/download.html) installed.
+- git installed
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Reinissance/scaleProvider
+
+# Navigate into the project directory
+cd scaleProvider
+
+# Run the setup script to initialize and configure submodules
+./setup.sh
+```
 
 ### How to Use
 
@@ -44,9 +58,14 @@ Currently, there are three plugins:
 
 ### Important Notes
 
-- The `scaleProvider` and `scaleFollowingSeq` plugins must use different MIDI channels or devices.
+- The `scaleProvider` and `scaleFollowingSeq` plugins must each use different MIDI channels or devices.
 - Use the device controlling the `scaleProvider` to define the harmonic context by pressing a chord. Then, with the device controlling the `scaleFollowingSeq`, you can play and record a bassline or other sequences that follow the defined harmonic context.
+- The chords defining the harmonic context should be played slightly before the change should take effect because of latency in the network communication of pdlink.
 - Currently, the `scaleFollowingSeq` plugin plays back notes randomly selected within a range of at least one octave, which you can define.
+
+### Planned features
+
+Other features are planed, that will affect the playback of the sequencers according to the velocity, speed or polyphony of the controlling midi track the way that these musical parameters can also be transformed into others in order to make the playback result more interactive.
 
 ### Detailed Documentation
 
